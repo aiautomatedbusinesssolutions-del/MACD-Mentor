@@ -3,3 +3,4 @@ streamlit-lightweight-charts==0.7.20
 requests==2.32.3
 pandas==2.2.3
 python-dotenv==1.0.1
+streamlit-analytics2==0.10.5
