@@ -94,8 +94,8 @@ with streamlit_analytics.track(unsafe_password=os.getenv("ANALYTICS_PASSWORD", "
     with st.spinner(f"Fetching 5 years of daily data for **{ticker}**…"):
         try:
             df = fetch_daily_ohlc(ticker, years=5)
-        except Exception as e:
-            st.error(f"Could not fetch data for **{ticker}**. Please check the symbol and try again.")
+        except Exception:
+            st.error("Ticker not found. Please check the symbol and try again.")
             st.stop()
 
     # ── Compute Indicators ───────────────────────────────────────────────────
